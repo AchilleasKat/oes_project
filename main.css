@@ -1,0 +1,59 @@
+body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+    font-size: calc(10px + (20 - 10) * ((100vw - 300px) / (1600 - 300)));
+}
+.container{
+    height: 95vh;
+    width: 95vw;
+    display: grid;
+    grid-template-columns: max-content; 
+    grid-template-rows: max-content;
+    border-style: solid;
+    border-width: 0.1rem;
+    padding: 0;
+    margin: 1rem;
+    grid-template-areas:
+    "header header header"
+    "nav main main"
+    "nav footer footer";
+    overflow: hidden; 
+}
+
+.header{
+    grid-area: header;
+    border-style: none none solid none;
+    border-width: 0.1rem;
+    text-align: center;
+}
+.navigation{
+    grid-area: nav;
+    padding: 1rem 2rem;
+    max-width: 20vw; 
+    border-style: none solid none none;
+    border-width: 0.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+.nav-link{
+    margin: 2rem 0 0 0;
+    padding: 0.2rem 0.3rem;
+    width: max-content;
+    max-width: inherit;
+    height: min-content;
+    background-color:grey;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+.footer{
+    grid-area: footer;
+}

@@ -1,0 +1,50 @@
+.main{
+    grid-area: main;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 0.7rem;
+    padding: 0;
+    overflow: hidden;
+}
+
+.description{
+    margin: 0 0;
+    padding: 0 0.5rem;
+}
+
+.emailForm {
+    width: inherit;
+    margin: 0 0; 
+}
+
+.formTitle{
+    color: green;
+}
+
+.emailForm >form{
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    margin: 0 2rem; 
+    padding: 0;
+    align-items:flex-start;
+}
+
+.emailForm >form >input{
+    width: max-content;
+    margin: 1rem 4rem ; 
+}
+
+.emailForm >form >label{
+    margin: 0.7rem 0 ; 
+}
+
+.footer{
+   grid-area:footer;
+   margin: 0 0 0 0.7rem;
+}
+
+.footer> .emailAddress >p{
+    margin: 0 0 0 2rem;
+}

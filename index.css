@@ -1,0 +1,37 @@
+ .footer >img {
+    width: calc(100% - 50px);
+    height: auto;
+    margin: 0 auto ;
+} 
+.main{
+    grid-area: main;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align:start;
+    font-weight: 600;
+}
+
+.main > p{
+    padding: 0 ;
+    margin: 0 0;
+}
+
+.footer{
+    grid-area: footer;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.homeMainText{
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}

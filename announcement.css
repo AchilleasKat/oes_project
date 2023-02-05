@@ -1,0 +1,65 @@
+.container{
+    grid-template-areas:
+    "header header header header"
+    "nav main main main"; 
+}
+
+.header{
+    grid-area: header;
+}
+
+.navigation{
+    grid-area: nav;
+}
+
+.main{
+    grid-area: main;
+    padding: 0;
+    margin: 0 0 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: auto;
+    
+}
+.announcements{
+    padding: 0;
+    margin: 0;
+    height: max-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.announcementHeader{
+    margin: 0.5rem 0 0 0;
+    padding: 0;
+    color:green
+}
+.announcementBody{
+    margin: 0 2rem 0 5rem;
+    border-style:none none solid none ;
+    border-width: 0.1rem;
+    word-wrap: normal;
+}
+
+.homework-link{
+    color: blue;
+}
+
+.footer{
+    position: sticky;
+    align-self: flex-end;
+    top: 94vh;
+    margin-right: 3rem;
+} 
+
+.footer >a{
+    color: blue;
+    text-decoration: none;
+}
+
+.footer >a:visited{
+    color: blue;
+}
