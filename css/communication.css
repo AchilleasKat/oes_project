@@ -8,6 +8,10 @@
     overflow: hidden;
 }
 
+pre{
+    white-space:inherit;
+}
+
 .description{
     margin: 0 0;
     padding: 0 0.5rem;
