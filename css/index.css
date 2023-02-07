@@ -1,5 +1,5 @@
  .footer >img {
-    width: calc(100% - 50px);
+    width: 80%;
     height: auto;
     margin: 0 auto ;
 } 
