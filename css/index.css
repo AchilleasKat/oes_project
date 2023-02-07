@@ -1,7 +1,6 @@
  .footer >img {
-    width: calc(100% - 50px);
-    height:  auto;
-    object-fit:contain;
+    width: 80%;
+    height: auto;
     margin: 0 auto;
 } 
 .main{
