@@ -17,7 +17,7 @@ pre{
     padding: 0 0.5rem;
 }
 
-.emailForm {
+.emailFormContainer {
     width: inherit;
     margin: 0 0; 
 }
@@ -26,7 +26,7 @@ pre{
     color: green;
 }
 
-.emailForm >form{
+.emailForm{
     position: relative;
     display:flex;
     flex-direction: column;
@@ -35,12 +35,12 @@ pre{
     align-items:flex-start;
 }
 
-.emailForm >form >input{
+.emailForm >input{
     width: max-content;
     margin: 1rem 4rem ; 
 }
 
-.emailForm >form >label{
+.emailForm >label{
     margin: 0.7rem 0 ; 
 }
 
