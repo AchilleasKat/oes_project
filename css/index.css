@@ -1,5 +1,5 @@
- .footer >img {
-    width: 80%;
+.footer >img {
+    width: 70%;
     height: auto;
     margin: 0 auto;
 } 
@@ -10,13 +10,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align:start;
     font-weight: 600;
 }
 
-.main > p{
-    padding: 0 ;
+.main >ul>li{
+    padding: 0.5rem 0;
     margin: 0 0;
+    word-wrap: normal;
+    list-style: none;
 }
 
 .footer{
