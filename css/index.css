@@ -13,6 +13,11 @@
     font-weight: 600;
 }
 
+.homeMainText{
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .homeMainText >li{
     padding: 0.5rem 0;
     margin: 0 0;
@@ -30,9 +35,4 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.homeMainText{
-    font-weight: 600;
-    font-family: Arial, Helvetica, sans-serif;
 }
