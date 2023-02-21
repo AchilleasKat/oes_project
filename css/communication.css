@@ -1,8 +1,5 @@
 .main{
-    grid-area: main;
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
+    grid-area: main; 
     margin: 0 0 0 0.7rem;
     padding: 0;
     overflow: hidden;
@@ -13,13 +10,13 @@ pre{
 }
 
 .description{
-    margin: 0 0;
+    margin: 1rem 1rem;
     padding: 0 0.5rem;
 }
 
 .emailFormContainer {
     width: inherit;
-    margin: 0 0; 
+    margin: 3rem 0 0 0; 
 }
 
 .formTitle{
@@ -27,10 +24,9 @@ pre{
 }
 
 .emailForm{
-    position: relative;
     display:flex;
     flex-direction: column;
-    margin: 0 2rem; 
+    margin: 1rem 2rem ; 
     padding: 0;
     align-items:flex-start;
 }
