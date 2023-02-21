@@ -1,8 +1,10 @@
 .main{
     grid-area: main; 
-    margin: 0 0 0 0.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    margin: 0 0;
     padding: 0;
-    overflow: hidden;
 }
 
 pre{
@@ -10,13 +12,17 @@ pre{
 }
 
 .description{
-    margin: 1rem 1rem;
+    margin: 0.7rem 1rem;
     padding: 0 0.5rem;
+}
+
+.description >ul{
+    margin-left: 3rem;
 }
 
 .emailFormContainer {
     width: inherit;
-    margin: 3rem 0 0 0; 
+    margin: 3rem 0 0 0.7rem; 
 }
 
 .formTitle{
@@ -42,9 +48,14 @@ pre{
 
 .footer{
    grid-area:footer;
-   margin: 0 0 0 0.7rem;
+   margin: 2rem 0 0.7rem;
+   padding:0 0;
+}
+
+.footer .emailAddress{
+    margin-left: 0.7rem;
 }
 
 .footer> .emailAddress >p{
-    margin: 0 0 0 2rem;
+    margin-left: 1rem;
 }

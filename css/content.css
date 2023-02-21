@@ -20,8 +20,8 @@
     
 }
 .mainContent{
-    padding: 0;
-    margin: 0;
+    padding: 1.5rem 0 ;
+    margin: 0 0 ;
     height: max-content;
     width: 100%;
 }
@@ -48,7 +48,6 @@ pre{
     position: sticky;
     align-self: flex-end;
     top: 94vh;
-    margin-right: 3rem;
 } 
 
 .footer >a{
