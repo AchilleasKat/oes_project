@@ -1,0 +1,57 @@
+.container{
+    grid-template-areas:
+    "header header header header"
+    "nav main main main"; 
+}
+
+.header{
+    grid-area: header;
+}
+
+.navigation{
+    grid-area: nav;
+}
+
+.main{
+    grid-area: main;
+    padding: 0;
+    margin: 0 0 0 1rem;
+    overflow: auto;
+    
+}
+.mainContent{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contentHeader{
+    margin: 0.5rem 0 0 0;
+    padding: 0;
+    color:green
+}
+.contentBody{
+    margin: 0 2rem 0 5rem;
+    padding: 0;
+    border-style:none none solid none ;
+    border-width: 0.1rem;
+    word-wrap: normal;
+}
+
+.footer{
+    position: sticky;
+    align-self: flex-end;
+    top: 94vh;
+    margin-right: 3rem;
+} 
+
+.footer >a{
+    color: blue;
+    text-decoration: none;
+}
+
+.footer >a:visited{
+    color: blue;
+}

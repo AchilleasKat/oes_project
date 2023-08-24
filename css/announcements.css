@@ -1,0 +1,16 @@
+
+.announcement-link{
+    color: blue;
+}
+
+pre{
+    white-space: pre-line;
+}
+.contentBody > ul{
+    padding: 1rem 0;
+    list-style: none;
+}
+
+.contentBody >ul li{
+    padding: 1rem 0;
+}
