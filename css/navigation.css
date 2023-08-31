@@ -20,3 +20,7 @@
     text-align: center;
     text-decoration: none;
 }
+
+.nav-link:hover{
+    background-color: rgb(72, 73, 73);
+}

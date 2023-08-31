@@ -18,7 +18,7 @@
     <div class="container">
         <div class="header">
             <h1 id="title">
-                Εργασίες
+                Εργασίες Tutor
             </h1>
         </div>
         <div class="navigation">

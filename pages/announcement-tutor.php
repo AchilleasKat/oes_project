@@ -16,10 +16,9 @@
 
 <body>
     <div class="container">
-        <div id="topDiv"></div>
         <div class="header">
             <h1 id="title">
-                Ανακοινώσεις
+                Ανακοινώσεις Tutor
             </h1>
         </div>
         <div class="navigation">
@@ -28,6 +27,25 @@
             ?>
         </div>
         <div class="main">
+            <div id="topDiv"></div>
+            <div class="formContainer">
+                <div class="formLink">
+                    <?php
+                    if (!isset($_GET['show_form']) || $_GET['show_form'] == 0) {
+                        echo '<a href="?show_form=1">Προσθήκη νέας ανακοίνωσης</a>';
+                    } else {
+                        echo '<a href="?show_form=0">Κλείσιμο Φόρμας</a>';
+                    }
+                    ?>
+                </div>
+                <?php
+                if (isset($_GET['show_form']) && $_GET['show_form'] == 1) {
+                    echo '<div class="mainForm">';
+                    require('../utils/announcementForm.html');
+                    echo '</div>';
+                }
+                ?>
+            </div>
             <form class="announcementBody" method="GET">
                 <?php
                 require('../database/announcementsDB.php');

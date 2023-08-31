@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../css/form.css">
+</head>
+
+<body>
+
+    <form method="post" action="../database/announcementsDB.php" class="form">
+
+        <label for="date">Date:</label>
+        <input type="date" name="date" required><br>
+
+
+        <div class="formItem">
+            <label  for="subject">Subject:</label>
+            <input type="text" name="subject" required>
+        </div>
+
+        <div class="formItem">
+            <label for="body">Body:</label>
+            <textarea name="body" required></textarea>
+        </div>
+
+        <input class="submitButton" type="submit" value="Submit">
+    </form>
+
+</html>
