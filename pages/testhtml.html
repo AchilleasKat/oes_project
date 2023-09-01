@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="gr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <title>Σύνδεση</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/login-signup.css" />
+</head>
+
+
+
+
+<body>
+    <div class="login-signup-conatainer">
+        <div class="maincontent">
+            <div class="headeritems">
+                <h4>Σύνδεση</h4>    
+                <div class="errorMessage"> 
+                    Invalid username or password
+                </div> 
+            </div>        
+            <form class="submitbox" method="POST">
+                <div class="textfields">
+                    <label class="label">Όνομα Χρήστη ή Email</label>
+                    <input class="userInput" type="text" required placeholder="username" name="username" pattern=".{2,15}"/>
+                </div>
+                <div class="textfields">
+                    <label class="label">Κωδικός</label>
+                    <input class="userInput" type="password" required placeholder="password" name="password"  />
+                </div>
+            <button class="submitButton" type="submit">Σύνδεση</button>
+                <div class="boxfooter">
+                    <h5>Δεν έχετε Λογαριασμό<a href="signup.php"> Εγγραφή </a></h5>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

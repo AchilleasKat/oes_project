@@ -60,6 +60,10 @@ body{
     border-width: 0.1rem;
 }
 
+.nav-link:hover{
+    background-color: rgb(78, 78, 78);
+}
+
 
 .nav-link{
     margin: 3.5rem 0 0 0;
