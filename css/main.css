@@ -3,15 +3,11 @@
     margin: 0;
     box-sizing: border-box;
 }
-html{
-    height: 100%;
+html{  
     padding: 0;
     margin: 0;
 }
-body{
-    position: absolute;
-    height: 100%;
-    width: 100%;
+body{ 
     padding: 0;
     margin: 0;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
@@ -20,7 +16,9 @@ body{
 
 .container{
     display: grid;
-    height: 95%;
+    position: fixed;
+    height: calc(100% - 2rem);
+    width: calc(100% - 2rem); /* Width of 100% minus 2 rem for equal margins */
     grid-template-columns: max-content; 
     grid-template-rows: max-content;
     border-style: solid;
@@ -91,14 +89,10 @@ body{
         box-sizing: border-box;
     }
     html{
-        height: 100%;
         padding: 0;
         margin: 0;
     }
     body{
-        position: absolute;
-        height: 100%;
-        width: 100%;
         padding: 0;
         margin: 0;
         font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
@@ -108,7 +102,9 @@ body{
     .container{
         display: flex;
         flex-direction: column;
-        height: 97%;
+        position: fixed;
+        height: calc(100% - 2rem);
+        width: calc(100% - 2rem);
         border-style: solid;
         border-width: 0.1rem;
         padding: 0;
