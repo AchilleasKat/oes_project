@@ -6,7 +6,7 @@
 
 .homeMainText{
     margin-top: 2rem;
-    font-weight: 600;
+    font-weight: 500;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -15,6 +15,28 @@
     margin: 0 0;
     word-wrap: normal;
     list-style: none;
+}
+
+.index-link{
+    font-style: italic;
+    color: rgb(0, 0, 0);
+}
+
+.index-link:link {
+        text-decoration: none;
+  }
+  
+.index-link:visited {
+        text-decoration: none;
+  }
+
+  .index-link:hover {
+    text-decoration: none;
+    color: blue;
+}
+
+.index-link:active {
+    text-decoration: none;
 }
 
 .footer{
@@ -26,4 +48,17 @@
     margin: auto;
     width: 70%;
     height: auto;
+}
+
+@media only screen and (max-width: 750px){
+
+    .main{
+        text-align: center;
+        font-weight: 600;
+        margin: 0 0 1rem 0;
+    }
+
+    .footer{
+        margin: 2rem 0 0 0;
+    }
 }

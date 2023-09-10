@@ -29,13 +29,13 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $subject = $_POST["subject"];
     $body = $_POST["body"];
-    $date = $_POST["date"];
-    //$date = date("Y/m/d");
+    $date = date("Y/m/d");
 
     $cleanSubject = sanitizeInput($subject);
     $cleanBody = sanitizeInput($body);
+    $body = addLinkFunctionality($cleanBody);
 
-    $sql = "INSERT INTO announcements(date,subject,body) VALUES ('$date','$cleanSubject','$cleanBody')";
+    $sql = "INSERT INTO announcements(date,subject,body) VALUES ('$date','$cleanSubject','$body')";
     if ($conn->query($sql) === TRUE) {
         echo "Record inserted successfully";
     } else {
@@ -43,19 +43,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
+//This function removes potentially harmful characters from the input.
 function sanitizeInput($input)
 {
     $cleanInput = filter_var($input, FILTER_SANITIZE_STRING);
-
-    $allowedTags = array(
-        'a' => array('href' => true),
-        'br' => array(),
-    );
-
-    $cleanInput = strip_tags($cleanInput, '<' . implode('><', array_keys($allowedTags)) . '>');
     $cleanInput = htmlspecialchars($cleanInput, ENT_QUOTES, 'UTF-8');
 
     return $cleanInput;
+}
+//This function replaces the string that the user has submited as url with an <a> tag so that the link can be displayed.
+//The strings that will be replaced are of this form [url=https://www.example.com]Visit Example[/url].
+function addLinkFunctionality($input)
+{
+    return preg_replace('/\[url=([^\]]+)\](.*?)\[\/url\]/', '<a href="$1" class="announcement-link">$2</a>', $input);
 }
 
 mysqli_close($conn);
