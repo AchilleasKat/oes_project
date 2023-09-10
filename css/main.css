@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 html{  
     padding: 0;
     margin: 0;
@@ -32,6 +33,7 @@ body{
     overflow: hidden; 
 }
 
+
 .header{
     grid-area: header;
     border-style: none none solid none;
@@ -52,16 +54,24 @@ body{
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 0 2.5rem;
+    padding: 0 2rem;
     margin: 0; 
     border-style: none solid none none;
     border-width: 0.1rem;
 }
 
-.nav-link:hover{
-    background-color: rgb(78, 78, 78);
+.navigation nav ul{
+    margin: 0 ;
+    padding: 0;
+    list-style: none;
 }
 
+.navigation nav ul li{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 1rem 0 0 0;    
+}
 
 .nav-link{
     margin: 3.5rem 0 0 0;
@@ -75,6 +85,9 @@ body{
     text-decoration: none;
 }
 
+.nav-link:hover{
+    background-color: rgb(72, 73, 73);
+}
 
 .footer{
     grid-area: footer;
@@ -125,35 +138,47 @@ body{
         padding: 0;
     }
     
-    .navigation{
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        align-items: center;
-        padding: 0;
-        margin: 1rem 0; 
+    .navigation{         
+        margin: 0;
+        padding: 0 ;
+        width: 100%;
         border-style: none none solid none;
         border-width: 0.1rem;
     }
+
+    .navigation{  
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }  
     
-    .nav-link:hover{
-        background-color: rgb(78, 78, 78);
+    .navigation nav ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        list-style-type: none;    
     }
-    
-    
+
+    .navigation nav ul li{
+        display: inline-block;
+        white-space: nowrap;
+        margin: 1rem;
+    }
+
+    .navigation nav ul li:last-child {
+        margin-right: 0; /* Remove margin-right for the last item in each row */
+    }
+
     .nav-link{
-        margin: 0.8rem 0.2rem;
         padding: 0.2rem 0.3rem;
-        width: min-content;
+        width: fit-content;
         font-size:xx-small;
         max-width: inherit;
-        height: min-content;
-        background-color:grey;
-        color: white;
-        text-align: center;
-        text-decoration: none;
+        height: fit-content;        
     }
-    
     
     .footer{
         grid-area: footer;
