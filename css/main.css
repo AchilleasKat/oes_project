@@ -20,7 +20,7 @@ body{
 
 .container{
     display: grid;
-    height: 97%;
+    height: 95%;
     grid-template-columns: max-content; 
     grid-template-rows: max-content;
     border-style: solid;
