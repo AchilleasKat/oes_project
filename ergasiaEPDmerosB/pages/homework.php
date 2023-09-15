@@ -23,7 +23,7 @@
         </div>
         <div class="navigation">
             <?php
-            include('../utils/navigation.html');
+            include(__DIR__ . '/../utils/navigation.html');
             ?>
         </div>
         <div class="main">
@@ -42,7 +42,7 @@
                     </div>
                     Εκφώνηση:
                     <div class="indented">
-                        Κατεβάστε την εκφώνηση από <a href="../files/ergasia1.docx">εδώ</a>
+                        Κατεβάστε την εκφώνηση από <a href="../ergasiaEPDmerosB/files/ergasia1.docx">εδώ</a>
                     </div>
                     Παραδοτέα:
                     <div class="orderedList">
@@ -75,7 +75,7 @@
 
                     Εκφώνηση:
                     <div class="indented">
-                        Κατεβάστε την εκφώνηση από <a href="../files/ergasia2.docx">εδώ</a>
+                        Κατεβάστε την εκφώνηση από <a href="../ergasiaEPDmerosB/files/ergasia2.docx">εδώ</a>
                     </div>
                     Παραδοτέα:
 

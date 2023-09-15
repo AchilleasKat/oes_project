@@ -8,10 +8,10 @@
     <title>Ανακοινώσεις</title>
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/content.css" />
-    <link rel="stylesheet" href="../css/announcements.css">
+    <link rel="stylesheet" href="../css/announcement.css">
     <link href="../css/main.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <link href="../css/content.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
-    <link href="../css/announcements.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link href="../css/announcement.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -24,13 +24,13 @@
         </div>
         <div class="navigation">
             <?php
-            include('../utils/navigation.html');
+            include(__DIR__ . '/../utils/navigation.html');
             ?>
         </div>
         <div class="main">
             <form class="announcementBody" method="GET">
                 <?php
-                require('../database/announcementsDB.php');
+                require(__DIR__ . '/../database/announcementDB.php');
                 ?>
             </form>
             <div class="footer">

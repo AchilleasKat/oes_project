@@ -9,9 +9,9 @@ if (!isset($_SESSION['username'])) {
 } else {
     $_SESSION["login_redirect"] = $_SERVER["PHP_SELF"];
     if ($_SESSION['role'] == 'tutor') {
-        include("../pages/document-tutor.php");
+        include("../ergasiaEPDmerosB/pages/homework-tutor.php");
     } else {
-        include("../pages/document.php");
+        include("../ergasiaEPDmerosB/pages/homework.php");
     }
 }
 ?>

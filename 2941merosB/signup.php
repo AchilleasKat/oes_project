@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
     <title>Εγγραφή</title>
-    <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/login-signup.css" />
-    <link href="../css/main.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
-    <link href="../css/login-signup.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../ergasiaEPDmerosB/css/main.css" />
+    <link rel="stylesheet" href="../ergasiaEPDmerosB/css/login-signup.css" />
+    <link href="../ergasiaEPDmerosB/css/main.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link href="../ergasiaEPDmerosB/css/login-signup.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 </head>
 
 <?php
-include("../database/database.php");
+include("../ergasiaEPDmerosB/database/database.php");
 function transform_post($field)
 {
     if (isset($_POST[$field]))

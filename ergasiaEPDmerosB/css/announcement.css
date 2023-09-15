@@ -1,12 +1,36 @@
 
 .announcement-link{
-    color: blue;
+    color: #007bff;
+}
+.announcement-link:hover{
+    color: #0056b3;
 }
 
 pre{
     white-space: pre-line;
 }
 
+.headerContainer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0.5rem 0 0 0 ;
+}
+
+.headerContainer a{
+    margin: 0 0.5rem;
+    padding: 0.2rem;
+    font-size: calc(7px + (20 - 10) * ((100vw - 300px) / (1600 - 300)));
+    color:#007bff;
+    border-style: none solid none solid;
+    border-width: 0.2vw;
+    border-radius: 10% / 50%;
+    text-decoration:none;
+}
+
+.headerContainer a:hover{
+    color: #0056b3;
+}
 .contentBody > ul{
     padding: 1rem 0;
     list-style: none;

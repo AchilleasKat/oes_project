@@ -1,5 +1,5 @@
 <?php
-$jsonString = file_get_contents('../db-properties.json');
+$jsonString = file_get_contents(__DIR__ . '/../db-properties.json');
 $databaseProperties = json_decode($jsonString, true);
 
 $hostname = $databaseProperties["hostname"];

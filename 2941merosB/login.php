@@ -6,17 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
     <title>Σύνδεση</title>
-    <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/login-signup.css" />
-    <link href="../css/main.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
-    <link href="../css/login-signup.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../ergasiaEPDmerosB/css/main.css" />
+    <link rel="stylesheet" href="../ergasiaEPDmerosB/css/login-signup.css" />
+    <link href="../ergasiaEPDmerosB/css/main.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link href="../ergasiaEPDmerosB/css/login-signup.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 </head>
 
 
 
 <?php
 session_start();
-include("../database/database.php");
+include("../ergasiaEPDmerosB/database/database.php");
 if (isset($_SESSION['username'])) { //If already logged in redirect to previous page
     if (isset($_SESSION["login_redirect"]) == true) {
         header("Location:" . $_SESSION["login_redirect"]); //Redirect to previous page saved in variable $_SESSION["login_redirect"]
@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $_SESSION['username'] = $username;
                 $_SESSION['role'] = $row['role'];
                 $errorCounter = 0;
-                header('Location: ../pages/index.php');
+                header('Location: ../ergasiaEPDmerosB/pages/index.php');
                 exit;
             } else {
                 $errorCounter = 1;
@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($username == 'myusername' && $password == 'mypassword') {
         $_SESSION['username'] = $username;
         $errorCounter = 0;
-        header('Location: ../pages/index.php');
+        header('Location: ../ergasiaEPDmerosB/pages/index.php');
         exit;
     } else {
         $errorCounter = 1;

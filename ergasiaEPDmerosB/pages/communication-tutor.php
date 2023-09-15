@@ -16,12 +16,12 @@
     <div class="container">
         <div class="header">
             <h1 id="title">
-                Επικοινωνία
+                Επικοινωνία Tutor
             </h1>
         </div>
         <div class="navigation">
             <?php
-            include('../utils/navigation.html');
+            include(__DIR__ . '/../utils/navigation.html');
             ?>
         </div>
         <div class="main">
