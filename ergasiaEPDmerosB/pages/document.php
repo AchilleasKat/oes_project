@@ -27,6 +27,7 @@
             ?>
         </div>
         <div class="main">
+            <div id="topDiv"></div>
             <div class="contentContainer" method="GET">
                 <?php
                 require(__DIR__ . '/../database/documentDB.php');

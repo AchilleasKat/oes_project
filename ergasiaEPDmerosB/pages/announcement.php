@@ -16,7 +16,6 @@
 
 <body>
     <div class="container">
-        <div id="topDiv"></div>
         <div class="header">
             <h1 id="title">
                 Ανακοινώσεις
@@ -28,6 +27,7 @@
             ?>
         </div>
         <div class="main">
+            <div id="topDiv"></div>
             <div class="announcementBody" method="GET">
                 <?php
                 require(__DIR__ . '/../database/announcementDB.php');
