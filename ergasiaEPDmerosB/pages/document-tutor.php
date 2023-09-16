@@ -18,7 +18,7 @@
     <div class="container">
         <div class="header">
             <h1 id="title">
-                Έγγραφα Tutor
+                Έγγραφα
             </h1>
         </div>
         <div class="navigation">
