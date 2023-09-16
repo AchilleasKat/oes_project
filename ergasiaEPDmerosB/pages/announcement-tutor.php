@@ -46,11 +46,11 @@
                 }
                 ?>
             </div>
-            <form class="announcementBody" method="GET">
+            <div class="contentContainer" method="GET">
                 <?php
                 require(__DIR__ . '/../database/announcementDB.php');
                 ?>
-            </form>
+            </div>
             <div class="footer">
                 <a href="#topDiv"> top </a>
             </div>

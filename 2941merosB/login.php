@@ -22,7 +22,7 @@ if (isset($_SESSION['username'])) { //If already logged in redirect to previous 
         header("Location:" . $_SESSION["login_redirect"]); //Redirect to previous page saved in variable $_SESSION["login_redirect"]
         unset($_SESSION["login_redirect"]);
     } else {
-        header('Location: ../pages/index.php');
+        header('Location:  __DIR__ . /../index.php');
     }
     exit;
 }
@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $_SESSION['username'] = $username;
                 $_SESSION['role'] = $row['role'];
                 $errorCounter = 0;
-                header('Location: ../ergasiaEPDmerosB/pages/index.php');
+                header('Location: __DIR__ . /../index.php');
                 exit;
             } else {
                 $errorCounter = 1;
@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($username == 'myusername' && $password == 'mypassword') {
         $_SESSION['username'] = $username;
         $errorCounter = 0;
-        header('Location: ../ergasiaEPDmerosB/pages/index.php');
+        header('Location:  __DIR__ . /../index.php');
         exit;
     } else {
         $errorCounter = 1;

@@ -6,18 +6,23 @@
 </head>
 
 <?php
-if ($_GET['show_form'] == 'announcement') { ?>
+if ($_GET['show_form'] == 'document') { ?>
 
     <body>
-        <form method="post" action="../ergasiaEPDmerosB/database/announcementDB.php" class="form">
+        <form method="post" action="../ergasiaEPDmerosB/database/documentDB.php" class="form">
             <div class="formItem">
-                <label for="subject">Θέμα:</label>
-                <input type="text" name="subject" required>
+                <label for="title">Τιτλος:</label>
+                <input type="text" name="title" required>
             </div>
 
             <div class="formItem">
-                <label for="body">Σώμα:</label>
-                <textarea name="body" required></textarea>
+                <label for="description">Περιγραφή:</label>
+                <textarea name="description" required></textarea>
+            </div>
+
+            <div class="formItem">
+                <label for="path">Θέση Αρχείου:</label>
+                <input type="file" name="path" required>
             </div>
 
             <input class="submitButton" type="submit" value="Submit">
@@ -29,7 +34,7 @@ if ($_GET['show_form'] == 'announcement') { ?>
 
 <?php
 if ($_GET['show_form'] == 'edit' && isset($_GET['id'])) {
-    $announcementId = $_GET['id'];
+    $documentId = $_GET['id'];
 
     ?>
 

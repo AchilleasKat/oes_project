@@ -8,10 +8,6 @@ if (!isset($_SESSION['username'])) {
     exit;
 } else {
     $_SESSION["login_redirect"] = $_SERVER["PHP_SELF"];
-    if ($_SESSION['role'] == 'tutor') {
-        include("../ergasiaEPDmerosB/pages/communication-tutor.php");
-    } else {
-        include("../ergasiaEPDmerosB/pages/communication.php");
-    }
+    include("../ergasiaEPDmerosB/pages/communication.php");
 }
 ?>

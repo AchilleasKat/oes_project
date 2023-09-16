@@ -3,7 +3,7 @@ require(__DIR__ . '/database.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
-    $sql = "SELECT * FROM announcements ORDER BY date DESC";
+    $sql = "SELECT * FROM documents ORDER BY id";
     $result = $conn->query($sql);
 
     $counter = 0;
@@ -14,18 +14,18 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             $editButton = "";
             $deleteButton = "";
 
-            $announcement_id = $row["id"];
+            $document_id = $row["id"];
             if ($_SESSION['role'] == 'tutor') {
-                $deleteButton = "<form class=\"deleteForm\" method=\"post\" action=\"../ergasiaEPDmerosB/database/announcementDB.php\">
-                                        <input type=\"hidden\" name=\"announcement_id\" value= $announcement_id >
+                $deleteButton = "<form class=\"deleteForm\" method=\"post\" action=\"../ergasiaEPDmerosB/database/documentDB.php\">
+                                        <input type=\"hidden\" name=\"document_id\" value= $document_id >
                                         <input type=\"submit\" name=\"delete\" value=\"διαγραφή\">
                                 </form>";
 
                 if (!isset($_GET['show_form']) || $_GET['show_form'] == 0) {
-                    $editButton = "<a href='../ergasiaEPDmerosB/database/announcementDB.php?showForm=edit&edit_form={$row["id"]}'>επεξεργασία</a>";
+                    $editButton = "<a href='../ergasiaEPDmerosB/database/documentDB.php?showForm=edit&edit_form={$row["id"]}'>επεξεργασία</a>";
                 } else if ($_GET['show_form'] == 'edit' && $_GET['edit_form'] == $row['id']) {
                     $editButton = '<a href="?show_form=0">Κλείσιμο Φόρμας</a>';
-                    editAnnouncement($conn, $_GET['edit_form']);
+                    editdocument($conn, $_GET['edit_form']);
                 }
 
             }
@@ -33,52 +33,49 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             $html = <<<HTML
                 <div class="mainContent">
                     <div class="headerContainer">
-                        <h2 class="contentHeader"> Ανακοίνωση $counter </h2>
+                        <h2 class="contentHeader"> {$row['title']} </h2>
                         $deleteButton
                         $editButton
                     </div>
-                    <div class="contentBody">
-                        <ul>
-                            <li><b>Ημερομηνία</b>: {$row["date"]}</li>
-                            <li><b>Θέμα</b>: {$row["subject"]}</li>
-                            <li>{$row["body"]}</li>
-                        </ul>
-                    </div>
+                <div class="contentBody">
+                    <p>{$row['description']}</p>
+                    <a href="../ergasiaEPDmerosB/files/{$row['path']}">Download</a>
+                </div>
                 </div>
 HTML;
 
             echo $html;
         }
     } else {
-        echo "Δεν βρέθηκαν ανακοινώσεις.";
+        echo "Δεν υπάρχουν αρχεία.";
     }
 }
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!isset($_POST['delete'])) {
-        $subject = $_POST["subject"];
-        $body = $_POST["body"];
-        $date = date("Y/m/d");
+        $title = $_POST["title"];
+        $description = $_POST["description"];
+        $path = $_POST["path"];
 
-        $cleanSubject = sanitizeInput($subject);
-        $cleanBody = sanitizeInput($body);
-        $body = addLinkFunctionality($cleanBody);
+        $cleanTitle = sanitizeInput($title);
+        $cleandescription = sanitizeInput($description);
+        $description = addLinkFunctionality($cleandescription);
 
-        postAnnouncement($conn, $date, $cleanSubject, $body);
+        postDocument($conn, $title, $description, $path);
 
     } elseif (isset($_POST['delete'])) {
-        $announcement_id = $_POST['announcement_id'];
-        deleteAnnouncement($conn, $announcement_id);
+        $document_id = $_POST['document_id'];
+        deletedocument($conn, $document_id);
 
     }
 }
 
-function postAnnouncement($conn, $date, $subject, $body)
+function postDocument($conn, $title, $description, $path)
 {
-    $sql = "INSERT INTO announcements(date,subject,body) VALUES ('$date','$subject','$body')";
+    $sql = "INSERT INTO documents(title,description,path) VALUES ('$title','$description','$path')";
     if ($conn->query($sql) === TRUE) {
-        $redirect_url = "../../2941merosB/announcement.php";
+        $redirect_url = "../../2941merosB/document.php";
 
         $seconds = 3;
 
@@ -87,7 +84,7 @@ function postAnnouncement($conn, $date, $subject, $body)
         echo "<meta http-equiv='refresh' content='{$seconds};url={$redirect_url}'>";
         echo "</head>";
         echo "<body>";
-        echo "Η ανακοίνωση ανέβηκε με επιτυχία. <br>";
+        echo "Το αρχείο ανέβηκε με επιτυχία <br>";
         echo "Ανακατεύθυνση σε {$seconds} δευτερόλεπτα...";
         echo "</body>";
         echo "</html>";
@@ -96,40 +93,40 @@ function postAnnouncement($conn, $date, $subject, $body)
     }
 }
 
-function deleteAnnouncement($conn, $announcement_id)
+function deleteDocument($conn, $document_id)
 {
-    $sql = "DELETE FROM announcements WHERE id = '$announcement_id'";
+    $sql = "DELETE FROM documents WHERE id = '$document_id'";
     if ($conn->query($sql) === TRUE) {
-        echo "Announcement deleted successfully!";
+        echo "document deleted successfully!";
     } else {
-        echo "Error deleting announcement: " . mysqli_error($conn);
+        echo "Error deleting document: " . mysqli_error($conn);
     }
     unset($_POST['delete']);
 
-    header("Location: ../../2941merosB/announcement.php");
+    header("Location: ../../2941merosB/document.php");
     exit();
 }
 
-function editAnnouncement($conn, $announcementId)
+function editDocument($conn, $documentId)
 {
-    require(__DIR__ . '/../utils/announcementForms.php');
+    require(__DIR__ . '/../utils/documentForms.php');
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $subject = $_POST["subject"];
-        $body = $_POST["body"];
-        $date = date("Y/m/d");
+        $title = $_POST["title"];
+        $description = $_POST["description"];
+        $path = $_POST["path"];
 
         $cleanSubject = sanitizeInput($subject);
         $cleanBody = sanitizeInput($body);
         $body = addLinkFunctionality($cleanBody);
 
-        $sql = "INSERT INTO announcements(date,subject,body) VALUES ('$date','$cleanSubject','$body')";
+        $sql = "INSERT INTO documents(title,description,path) VALUES ('$title','$description','$path')";
         if ($conn->query($sql) === TRUE) {
-            echo "Record inserted successfully";
+            echo "Document inserted successfully";
         } else {
             echo "Error: " . $sql . "<br>";
         }
-        header("Location: display_announcements.php");
+        header("Location: display_documents.php");
         exit;
     }
 }
@@ -146,7 +143,7 @@ function sanitizeInput($input)
 //The strings that will be replaced are of this form: [url=https://www.example.com]Visit Example[/url] .
 function addLinkFunctionality($input)
 {
-    return preg_replace('/\[url=([^\]]+)\](.*?)\[\/url\]/', '<a href="$1" class="announcement-link">$2</a>', $input);
+    return preg_replace('/\[url=([^\]]+)\](.*?)\[\/url\]/', '<a href="$1" class="document-link">$2</a>', $input);
 }
 
 mysqli_close($conn);

@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
     <title>Ανακοινώσεις</title>
-    <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/content.css" />
-    <link rel="stylesheet" href="../css/announcement.css">
-    <link href="../css/main.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
-    <link href="../css/content.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
-    <link href="../css/announcement.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../ergasiaEPDmerosB/css/main.css" />
+    <link rel="stylesheet" href="../ergasiaEPDmerosB/css/content.css" />
+    <link rel="stylesheet" href="../ergasiaEPDmerosB/css/announcement.css">
+    <link href="../ergasiaEPDmerosB/css/main.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link href="../ergasiaEPDmerosB/css/content.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link href="../ergasiaEPDmerosB/css/announcement.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -28,11 +28,11 @@
             ?>
         </div>
         <div class="main">
-            <form class="announcementBody" method="GET">
+            <div class="announcementBody" method="GET">
                 <?php
                 require(__DIR__ . '/../database/announcementDB.php');
                 ?>
-            </form>
+            </div>
             <div class="footer">
                 <a href="#topDiv"> top </a>
             </div>

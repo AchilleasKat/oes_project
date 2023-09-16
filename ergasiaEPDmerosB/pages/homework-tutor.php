@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
     <title>Εργασίες</title>
-    <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/content.css" />
-    <link rel="stylesheet" href="../css/homework.css" />
-    <link href="../css/main.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
-    <link href="../css/content.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
-    <link href="../css/homework.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../ergasiaEPDmerosB/css/main.css" />
+    <link rel="stylesheet" href="../ergasiaEPDmerosB/css/content.css" />
+    <link rel="stylesheet" href="../ergasiaEPDmerosB/css/homework.css" />
+    <link href="../ergasiaEPDmerosB/css/main.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link href="../ergasiaEPDmerosB/css/content.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link href="../ergasiaEPDmerosB/css/homework.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
