@@ -27,68 +27,11 @@
             ?>
         </div>
         <div class="main">
-            <div class="mainContent" id="topDiv">
-                <h2 class="contentHeader"> Εργασία 1</h2>
-                <div class="contentBody">
-
-                    Στόχοι:Οι στόχοι της εργασίας είναι
-
-                    <div class="orderedList">
-                        <ol>
-                            <li>Εξοικείωση με βασικά χαρακτηριστικά της HTML</li>
-                            <li>Εξάσκηση στον σχεδιασμό της ιστοσελίδας με CSS</li>
-                            <li>Αντιμετώπιση των προβλημάτων που προκύπτουν σε κάθε στάδιο της ανάπτυξης</li>
-                        </ol>
-                    </div>
-                    Εκφώνηση:
-                    <div class="indented">
-                        Κατεβάστε την εκφώνηση από <a href="../ergasiaEPDmerosB/files/ergasia1.docx">εδώ</a>
-                    </div>
-                    Παραδοτέα:
-                    <div class="orderedList">
-                        <ol>
-                            <li>Τα αρχεία HTML CSS</li>
-                            <li>Αναφορά σε Word ή PDF</li>
-                        </ol>
-                    </div>
-                    <div class="deadline">
-                        Ημερομηνία Παράδοσης: 20/11/2022
-                    </div>
-                </div>
-            </div>
-            <div class="mainContent">
-                <h2 class="contentHeader"> Εργασία 2</h2>
-                <div class="contentBody">
-
-                    Στόχοι:Οι στόχοι της εργασίας είναι
-
-                    <div class="orderedList">
-                        <ol>
-                            <li> Ανάπτυξη της πρώτης εργασιας με την προσθήκη των νέων τεχνολογιών που διδάχθηκαν στο
-                                μάθημα</li>
-                            <li>Εξοικείωση με βασικά χαρακτηριστικά της Javascript</li>
-                            <li>Εξάσκηση στον σχεδιασμό της ιστοσελίδας με PHP</li>
-                            <li>Χρήση της MySQL για την ανάπτυξη της βάσης δεδομένων</li>
-                            <li>Αντιμετώπιση των προβλημάτων που προκύπτουν σε κάθε στάδιο της ανάπτυξης</li>
-                        </ol>
-                    </div>
-
-                    Εκφώνηση:
-                    <div class="indented">
-                        Κατεβάστε την εκφώνηση από <a href="../ergasiaEPDmerosB/files/ergasia2.docx">εδώ</a>
-                    </div>
-                    Παραδοτέα:
-
-                    <div class="orderedList">
-                        <ol>
-                            <li>Τα αρχεία της ιστοσελίδας</li>
-                            <li>Αναφορά σε Word ή PDF</li>
-                        </ol>
-                    </div>
-                    <div class="deadline">
-                        Ημερομηνία Παράδοσης: 10/1/2023
-                    </div>
-                </div>
+            <div id="topDiv"></div>
+            <div class="contentContainer" method="GET">
+                <?php
+                require(__DIR__ . '/../database/homeworkDB.php');
+                ?>
             </div>
             <div class="footer">
                 <a href="#topDiv"> top </a>

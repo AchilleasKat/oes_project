@@ -6,10 +6,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $sql = "SELECT * FROM documents ORDER BY id";
     $result = $conn->query($sql);
 
-    $counter = 0;
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
-            $counter++;
 
             $editButton = "";
             $deleteButton = "";
@@ -59,10 +57,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $path = $_POST["path"];
 
         $cleanTitle = sanitizeInput($title);
-        $cleandescription = sanitizeInput($description);
-        $description = addLinkFunctionality($cleandescription);
+        $cleanPath = sanitizeInput($path);
+        $cleanDescription = sanitizeInput($description);
+        $description = addLinkFunctionality($cleanDescription);
 
-        postDocument($conn, $title, $description, $path);
+        postDocument($conn, $cleanTitle, $description, $cleanPath);
 
     } elseif (isset($_POST['delete'])) {
         $document_id = $_POST['document_id'];

@@ -28,8 +28,8 @@ if ($_GET['show_form'] == 'announcement') { ?>
 ?>
 
 <?php
-if ($_GET['show_form'] == 'edit' && isset($_GET['id'])) {
-    $announcementId = $_GET['id'];
+if ($_GET['show_form'] == 'edit' && isset($_GET['edit_form'])) {
+    $announcementId = $_GET['edit_form'];
 
     ?>
 

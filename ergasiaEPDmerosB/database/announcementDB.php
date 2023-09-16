@@ -13,6 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
             $editButton = "";
             $deleteButton = "";
+            $form = "";
 
             $announcement_id = $row["id"];
             if ($_SESSION['role'] == 'tutor') {
@@ -22,10 +23,15 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                                 </form>";
 
                 if (!isset($_GET['show_form']) || $_GET['show_form'] == 0) {
-                    $editButton = "<a href='../ergasiaEPDmerosB/database/announcementDB.php?showForm=edit&edit_form={$row["id"]}'>επεξεργασία</a>";
+                    $editButton = "<a href='?showForm=edit&edit_form={$row["id"]}'>επεξεργασία</a>";
                 } else if ($_GET['show_form'] == 'edit' && $_GET['edit_form'] == $row['id']) {
                     $editButton = '<a href="?show_form=0">Κλείσιμο Φόρμας</a>';
                     editAnnouncement($conn, $_GET['edit_form']);
+                }
+                if (isset($_GET['show_form']) && $_GET['show_form'] == 'edit') {
+                    ob_start();
+                    require(__DIR__ . '/../utils/announcementForms.php');
+                    $form = ob_get_clean();
                 }
 
             }
@@ -38,6 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                         $editButton
                     </div>
                     <div class="contentBody">
+                        $form
                         <ul>
                             <li><b>Ημερομηνία</b>: {$row["date"]}</li>
                             <li><b>Θέμα</b>: {$row["subject"]}</li>
