@@ -29,11 +29,11 @@ if (!isset($_SESSION['username'])) {
             <div class="header">
                 <h1 id="title">Αρχική Σελιδα</h1>
             </div>
-            <div class="navigation">
+            <nav class="navigation">
                 <?php
                 include('../ergasiaEPDmerosB/utils/navigation.html');
                 ?>
-            </div>
+            </nav>
             <div class="main">
                 <ul class="homeMainText">
                     <li>Καλωσορίσατε στον ιστοχώρο εκμάθησης <strong>Βασικών Αρχών Δημιουργίας ιστοσελίδων</strong>.</li>

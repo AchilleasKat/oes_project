@@ -21,11 +21,11 @@
                 Εργασίες
             </h1>
         </div>
-        <div class="navigation">
+        <nav class="navigation">
             <?php
             include(__DIR__ . '/../utils/navigation.html');
             ?>
-        </div>
+        </nav>
         <div class="main">
             <div id="topDiv"></div>
             <div class="formContainer">

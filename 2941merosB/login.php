@@ -77,7 +77,7 @@ mysqli_close($conn);
             </div>
             <form class="submitbox" method="POST">
                 <div class="textfields">
-                    <label class="label">Όνομα Χρήστη ή Email</label>
+                    <label class="label">Email</label>
                     <input class="userInput" type="email" required placeholder="username" name="username" />
                 </div>
                 <div class="textfields">
@@ -85,9 +85,6 @@ mysqli_close($conn);
                     <input class="userInput" type="password" required placeholder="password" name="password" />
                 </div>
                 <button class="submitButton" type="submit">Σύνδεση</button>
-                <div class="boxfooter">
-                    <h5>Δεν έχετε Λογαριασμό<a href="signup.php"> Εγγραφή </a></h5>
-                </div>
             </form>
         </div>
     </div>

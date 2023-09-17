@@ -119,7 +119,9 @@ function deleteAnnouncement($conn, $announcement_id)
 
 function editAnnouncement($conn, $announcementId)
 {
+    ob_start();
     require(__DIR__ . '/../utils/announcementForms.php');
+    $form = ob_get_clean();
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $subject = $_POST["subject"];
@@ -130,7 +132,7 @@ function editAnnouncement($conn, $announcementId)
         $cleanBody = sanitizeInput($body);
         $body = addLinkFunctionality($cleanBody);
 
-        $sql = "INSERT INTO announcements(date,subject,body) VALUES ('$date','$cleanSubject','$body')";
+        $sql = "INSERT INTO announcements(date,subject,body) VALUES ('$date','$cleanSubject','$body') WHERE id=$announcementId";
         if ($conn->query($sql) === TRUE) {
             echo "Record inserted successfully";
         } else {
