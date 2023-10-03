@@ -1,0 +1,4 @@
+<Files db-properties.json>
+    Order allow,deny
+    Deny from all
+</Files>

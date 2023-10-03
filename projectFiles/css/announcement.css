@@ -1,0 +1,11 @@
+
+.announcement-link{
+    color: #007bff;
+}
+.announcement-link:hover{
+    color: #0056b3;
+}
+
+pre{
+    white-space: pre-line;
+}

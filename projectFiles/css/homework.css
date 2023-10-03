@@ -1,0 +1,29 @@
+.deadline{
+    color: red;
+}
+
+.contentBody{
+    font-family: monospace;
+    padding: 1rem 0;
+}
+
+.orderedList
+{
+    margin: 0 0 0 4rem;
+    padding: 0.5rem 0;
+    font-family: monospace;
+}
+
+.indented{
+    margin: 0 0 0 2rem;
+    padding: 1rem;
+}
+
+.orderedList li{
+    padding: 0.5rem 0;
+}
+
+pre{
+    white-space: pre-line;
+}
+

@@ -1,0 +1,133 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{  
+    padding: 0;
+    margin: 0; 
+}
+body{ 
+    padding: 0;
+    margin: 0;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+    font-size: calc(10px + (20 - 10) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.container{
+    display: grid;
+    position: fixed;
+    height: calc(100% - 2rem);
+    width: calc(100% - 2rem); /* Width of 100% minus 2 rem for equal margins */
+    grid-template-columns: max-content; 
+    grid-template-rows: max-content;
+    border-style: solid;
+    border-width: 0.1rem;
+    padding: 0;
+    margin: 1rem;
+    grid-template-areas:
+    "header header header"
+    "nav main main"
+    "nav footer footer";
+    overflow: hidden; 
+}
+
+
+.header{
+    grid-area: header;
+    border-style: none none solid none;
+    border-width: 0.1rem;
+    padding: 1rem 0;
+    margin: 0;
+    text-align: center;
+}
+
+.main{
+    margin:0;
+    padding: 0;
+}
+
+.navigation{
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 2rem;
+    margin: 0; 
+    border-style: none solid none none;
+    border-width: 0.1rem;
+}
+
+.nav-link:hover{
+    background-color: rgb(78, 78, 78);
+}
+
+.footer{
+    grid-area: footer;
+    margin: 0;
+    padding: 0;
+}
+
+@media only screen and (max-width: 750px){
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    html{
+        padding: 0;
+        margin: 0;
+    }
+    body{
+        padding: 0;
+        margin: 0;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+        font-size: calc(10px + (20 - 10) * ((100vw - 300px) / (1600 - 300)));
+    }
+    
+    .container{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        height: calc(100% - 2vh);
+        width: calc(100% - 2vw);
+        border-style: solid;
+        border-width: 0.1rem;
+        padding: 0;
+        margin: 1vh 1vw;  
+        overflow: hidden; 
+    }
+    
+    .header{
+        border-style: none none solid none;
+        border-width: 0.1rem;
+        padding: 1rem 0;
+        margin: 0;
+        text-align: center;
+    }
+    
+    .main{
+        margin:0;
+        padding: 0;
+    }
+    
+    .navigation{         
+        margin: 0;
+        padding: 0 ;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        border-style: none none solid none;
+        border-width: 0.1rem;
+    }
+        
+    
+    .footer{
+        grid-area: footer;
+        margin: 0;
+        padding: 0;
+    }
+}

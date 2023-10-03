@@ -1,0 +1,8 @@
+.contentBody{
+    padding: 0.5rem 0 ;
+}
+
+.contentBody p, .contentBody a{
+    display: block;
+    margin: 0.7rem 0;
+}
