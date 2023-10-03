@@ -2,22 +2,27 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="../ergasiaEPDmerosB/css/form.css">
+    <link rel="stylesheet" href="../projectFiles/css/form.css">
 </head>
 
 <?php
-if ($_GET['show_form'] == 'document') { ?>
+if ($_GET['show_form'] == 'homework') { ?>
 
     <body>
-        <form method="post" action="../ergasiaEPDmerosB/database/documentDB.php" class="form">
+        <form method="post" action="../projectFiles/database/homeworkDB.php" class="form">
             <div class="formItem">
-                <label for="title">Τιτλος:</label>
-                <input type="text" name="title" required>
+                <label for="goals">Στόχοι <br> (χωρίστε τους στόχους με κόμμα):</label>
+                <textarea name="goals" required></textarea>
             </div>
 
             <div class="formItem">
-                <label for="description">Περιγραφή:</label>
-                <textarea name="description" required></textarea>
+                <label for="docs">Παραδοτέα Αρχεία <br> (χωρίστε τα αρχεία με κόμμα):</label>
+                <input type="text" name="docs" required>
+            </div>
+
+            <div class="formItem">
+                <label for="deadline">Προθεσμία:</label>
+                <input type="date" name="deadline" required>
             </div>
 
             <div class="formItem">
@@ -34,8 +39,7 @@ if ($_GET['show_form'] == 'document') { ?>
 
 <?php
 if ($_GET['show_form'] == 'edit' && isset($_GET['id'])) {
-    $documentId = $_GET['id'];
-
+    $homeworkId = $_GET['id'];
     ?>
 
     <body>

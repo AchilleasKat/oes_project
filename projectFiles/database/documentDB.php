@@ -14,13 +14,13 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
             $document_id = $row["id"];
             if ($_SESSION['role'] == 'tutor') {
-                $deleteButton = "<form class=\"deleteForm\" method=\"post\" action=\"../ergasiaEPDmerosB/database/documentDB.php\">
+                $deleteButton = "<form class=\"deleteForm\" method=\"post\" action=\"../projectFiles/database/documentDB.php\">
                                         <input type=\"hidden\" name=\"document_id\" value= $document_id >
                                         <input type=\"submit\" name=\"delete\" value=\"διαγραφή\">
                                 </form>";
 
                 if (!isset($_GET['show_form']) || $_GET['show_form'] == 0) {
-                    $editButton = "<a href='../ergasiaEPDmerosB/database/documentDB.php?showForm=edit&edit_form={$row["id"]}'>επεξεργασία</a>";
+                    $editButton = "<a href='../projectFiles/database/documentDB.php?showForm=edit&edit_form={$row["id"]}'>επεξεργασία</a>";
                 } else if ($_GET['show_form'] == 'edit' && $_GET['edit_form'] == $row['id']) {
                     $editButton = '<a href="?show_form=0">Κλείσιμο Φόρμας</a>';
                     editdocument($conn, $_GET['edit_form']);
@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                     </div>
                 <div class="contentBody">
                     <p>{$row['description']}</p>
-                    <a href="../ergasiaEPDmerosB/files/{$row['path']}">Download</a>
+                    <a href="../projectFiles/files/{$row['path']}">Download</a>
                 </div>
                 </div>
 HTML;

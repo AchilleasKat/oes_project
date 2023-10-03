@@ -2,14 +2,14 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="../ergasiaEPDmerosB/css/form.css">
+    <link rel="stylesheet" href="../projectFiles/css/form.css">
 </head>
 
 <?php
 if ($_GET['show_form'] == 'announcement') { ?>
 
     <body>
-        <form method="post" action="../ergasiaEPDmerosB/database/announcementDB.php" class="form">
+        <form method="post" action="../projectFiles/database/announcementDB.php" class="form">
             <div class="formItem">
                 <label for="subject">Θέμα:</label>
                 <input type="text" name="subject" required>
@@ -34,7 +34,7 @@ if ($_GET['show_form'] == 'edit' && isset($_GET['edit_form'])) {
     ?>
 
     <body>
-        <form method="post" action="../ergasiaEPDmerosB/database/announcementDB.php" class="form">
+        <form method="post" action="../projectFiles/database/announcementDB.php" class="form">
             <div class="formItem">
                 <label for="subject">Θέμα:</label>
                 <input type="text" name="subject" required>

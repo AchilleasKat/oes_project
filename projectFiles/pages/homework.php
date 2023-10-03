@@ -5,20 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
-    <title> 'Εγγραφα Μαθήματος</title>
-    <link rel="stylesheet" href="../ergasiaEPDmerosB/css/main.css" />
-    <link rel="stylesheet" href="../ergasiaEPDmerosB/css/content.css" />
-    <link rel="stylesheet" href="../ergasiaEPDmerosB/css/documents.css" />
-    <link href="../ergasiaEPDmerosB/css/main.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
-    <link href="../ergasiaEPDmerosB/css/content.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
-    <link href="../ergasiaEPDmerosB/css/documents.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <title>Εργασίες</title>
+    <link rel="stylesheet" href="../projectFiles/css/main.css" />
+    <link rel="stylesheet" href="../projectFiles/css/content.css" />
+    <link rel="stylesheet" href="../projectFiles/css/homework.css" />
+    <link href="../projectFiles/css/main.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link href="../projectFiles/css/content.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link href="../projectFiles/css/homework.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
     <div class="container">
         <div class="header">
             <h1 id="title">
-                Έγγραφα
+                Εργασίες
             </h1>
         </div>
         <nav class="navigation">
@@ -30,7 +30,7 @@
             <div id="topDiv"></div>
             <div class="contentContainer" method="GET">
                 <?php
-                require(__DIR__ . '/../database/documentDB.php');
+                require(__DIR__ . '/../database/homeworkDB.php');
                 ?>
             </div>
             <div class="footer">

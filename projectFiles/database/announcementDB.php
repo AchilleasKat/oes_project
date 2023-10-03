@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
             $announcement_id = $row["id"];
             if ($_SESSION['role'] == 'tutor') {
-                $deleteButton = "<form class=\"deleteForm\" method=\"post\" action=\"../ergasiaEPDmerosB/database/announcementDB.php\">
+                $deleteButton = "<form class=\"deleteForm\" method=\"post\" action=\"../projectFiles/database/announcementDB.php\">
                                         <input type=\"hidden\" name=\"announcement_id\" value= $announcement_id >
                                         <input type=\"submit\" name=\"delete\" value=\"διαγραφή\">
                                 </form>";

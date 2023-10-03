@@ -8,6 +8,6 @@ if (!isset($_SESSION['username'])) {
     exit;
 } else {
     $_SESSION["login_redirect"] = $_SERVER["PHP_SELF"];
-    include("../ergasiaEPDmerosB/pages/communication.php");
+    include("../projectFiles/pages/communication.php");
 }
 ?>

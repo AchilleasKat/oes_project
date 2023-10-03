@@ -18,10 +18,10 @@ if (!isset($_SESSION['username'])) {
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width initial-scale=1.0">
         <title>Δημιουργία Ιστοσελίδων-Αρχική Σελίδα</title>
-        <link rel="stylesheet" href="../ergasiaEPDmerosB/css/main.css" />
-        <link rel="stylesheet" href="../ergasiaEPDmerosB/css/index.css">
-        <link href="../ergasiaEPDmerosB/css/main.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
-        <link href="../ergasiaEPDmerosB/css/index.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="../projectFiles/css/main.css" />
+        <link rel="stylesheet" href="../projectFiles/css/index.css">
+        <link href="../projectFiles/css/main.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+        <link href="../projectFiles/css/index.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     </head>
 
     <body>
@@ -31,7 +31,7 @@ if (!isset($_SESSION['username'])) {
             </div>
             <nav class="navigation">
                 <?php
-                include('../ergasiaEPDmerosB/utils/navigation.html');
+                include('../projectFiles/utils/navigation.html');
                 ?>
             </nav>
             <div class="main">
@@ -50,7 +50,7 @@ if (!isset($_SESSION['username'])) {
                 </ul>
             </div>
             <div class="footer">
-                <img src="../ergasiaEPDmerosB/images/html_head.jpg" alt="html header code">
+                <img src="../projectFiles/images/html_head.jpg" alt="html header code">
             </div>
         </div>
     </body>

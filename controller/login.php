@@ -6,17 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
     <title>Σύνδεση</title>
-    <link rel="stylesheet" href="../ergasiaEPDmerosB/css/main.css" />
-    <link rel="stylesheet" href="../ergasiaEPDmerosB/css/login-signup.css" />
-    <link href="../ergasiaEPDmerosB/css/main.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
-    <link href="../ergasiaEPDmerosB/css/login-signup.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../projectFiles/css/main.css" />
+    <link rel="stylesheet" href="../projectFiles/css/login-signup.css" />
+    <link href="../projectFiles/css/main.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link href="../projectFiles/css/login-signup.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 </head>
 
 
 
 <?php
 session_start();
-include("../ergasiaEPDmerosB/database/database.php");
+include("../projectFiles/database/database.php");
 if (isset($_SESSION['username'])) { //If already logged in redirect to previous page
     if (isset($_SESSION["login_redirect"]) == true) {
         header("Location:" . $_SESSION["login_redirect"]); //Redirect to previous page saved in variable $_SESSION["login_redirect"]

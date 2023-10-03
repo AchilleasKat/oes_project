@@ -16,13 +16,13 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
             $homework_id = $row["id"];
             if ($_SESSION['role'] == 'tutor') {
-                $deleteButton = "<form class=\"deleteForm\" method=\"post\" action=\"../ergasiaEPDmerosB/database/homeworkDB.php\">
+                $deleteButton = "<form class=\"deleteForm\" method=\"post\" action=\"../projectFiles/database/homeworkDB.php\">
                                         <input type=\"hidden\" name=\"homework_id\" value= $homework_id >
                                         <input type=\"submit\" name=\"delete\" value=\"διαγραφή\">
                                 </form>";
 
                 if (!isset($_GET['show_form']) || $_GET['show_form'] == 0) {
-                    $editButton = "<a href='../ergasiaEPDmerosB/database/homeworkDB.php?showForm=edit&edit_form={$row["id"]}'>επεξεργασία</a>";
+                    $editButton = "<a href='../projectFiles/database/homeworkDB.php?showForm=edit&edit_form={$row["id"]}'>επεξεργασία</a>";
                 } else if ($_GET['show_form'] == 'edit' && $_GET['edit_form'] == $row['id']) {
                     $editButton = '<a href="?show_form=0">Κλείσιμο Φόρμας</a>';
                     edithomework($conn, $_GET['edit_form']);
@@ -69,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                     </div>
                     Εκφώνηση:
                     <div class="indented">
-                        Κατεβάστε την εκφώνηση από <a href="../ergasiaEPDmerosB/files/{$row['path']}">εδώ</a>
+                        Κατεβάστε την εκφώνηση από <a href="../projectFiles/files/{$row['path']}">εδώ</a>
                     </div>
                     Παραδοτέα:
                     <div class="orderedList">
