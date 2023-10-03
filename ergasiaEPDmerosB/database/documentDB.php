@@ -74,7 +74,7 @@ function postDocument($conn, $title, $description, $path)
 {
     $sql = "INSERT INTO documents(title,description,path) VALUES ('$title','$description','$path')";
     if ($conn->query($sql) === TRUE) {
-        $redirect_url = "../../2941merosB/document.php";
+        $redirect_url = "../../controller/document.php";
 
         $seconds = 3;
 
@@ -102,7 +102,7 @@ function deleteDocument($conn, $document_id)
     }
     unset($_POST['delete']);
 
-    header("Location: ../../2941merosB/document.php");
+    header("Location: ../../controller/document.php");
     exit();
 }
 

@@ -116,7 +116,7 @@ function postHomework($conn, $goals, $path, $docs, $deadline)
 {
     $sql = "INSERT INTO homework(goals, path, docs, deadline) VALUES ('$goals', '$path', '$docs' ,'$deadline')";
     if ($conn->query($sql) === TRUE) {
-        $redirect_url = "../../2941merosB/homework.php";
+        $redirect_url = "../../controller/homework.php";
 
         $seconds = 3;
 
@@ -144,7 +144,7 @@ function deleteHomework($conn, $homework_id)
     }
     unset($_POST['delete']);
 
-    header("Location: ../../2941merosB/homework.php");
+    header("Location: ../../controller/homework.php");
     exit();
 }
 

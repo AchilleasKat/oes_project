@@ -85,7 +85,7 @@ function postAnnouncement($conn, $date, $subject, $body)
 {
     $sql = "INSERT INTO announcements(date,subject,body) VALUES ('$date','$subject','$body')";
     if ($conn->query($sql) === TRUE) {
-        $redirect_url = "../../2941merosB/announcement.php";
+        $redirect_url = "../../controller/announcement.php";
 
         $seconds = 3;
 
@@ -113,7 +113,7 @@ function deleteAnnouncement($conn, $announcement_id)
     }
     unset($_POST['delete']);
 
-    header("Location: ../../2941merosB/announcement.php");
+    header("Location: ../../controller/announcement.php");
     exit();
 }
 
